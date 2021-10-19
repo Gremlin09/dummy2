@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+*{
+	box-sizing:border-box;
+}
+body{
+	font-family:source sans pro,sans serif;
+	height:100vh;
+	margin:0;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	overflow:hidden;
+	background-color:#00e68a;
+	color:white;
+	}
+
+.tab{
+	display:flex;
+	width:90vw;	
+}
+.cards{
+	background-size:auto 100%;
+	background-position:center;
+	background-repeat:no-repeat;
+	border-radius:50px;
+	flex:0.5;
+	border:3px white solid;
+ 	margin:8px;
+ 	height:75vh;
+ 	position:relative;
+ 	transition:flex 0.7s ease-in;
+}
+h1{
+	padding-top:10px;
+	color:black;
+}
+ .cards h3{
+ 	position:absolute;
+ 	margin:0;
+ 	bottom:20px;
+ 	left:20px;
+ 	opacity:0;
+ 
+ }
+ .expand{
+ 	flex:5;
+ }
+ .expand h3{
+ 	opacity:1;
+ 	transition:opacity 0.3s ease-in 0.4s;
+ }
+ @media(max-width:560px){
+ 	.tab{
+ 		width:100vw;
+ 	}
+ 	.cards:nth-of-type(4),.cards:nth-of-type(5),.cards:nth-of-type(6){
+ 		display:none;
+ 	}
+ }
